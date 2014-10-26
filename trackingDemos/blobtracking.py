@@ -18,7 +18,7 @@ while display.isNotDone():
   if blobs:
     for blob in blobs:
       img.drawCircle((blob.x, blob.y), 10, SimpleCV.Color.RED, 3)
-      dist.drawCircle((blob.x, blob.y), 10, SimpleCV.Color.RED, 3)
+      flippedDist.drawCircle((blob.x, blob.y), 10, SimpleCV.Color.RED, 3)
     # circles = blobs.filter([b.isCircle(0.2) for b in blobs])
     # if circles:
       # img.drawCircle((circles[-1].x, circles[-1].y), circles[-1].radius(),SimpleCV.Color.RED,3)
