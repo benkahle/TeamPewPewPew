@@ -2,7 +2,7 @@ import SimpleCV
 import math
  
 display = SimpleCV.Display()
-cam = SimpleCV.Camera(prop_set={"width":320,"height":240})
+cam = SimpleCV.Camera(0, prop_set={"width":320,"height":240})
 normaldisplay = True
 
 pos = (0,0)
