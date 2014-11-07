@@ -1,5 +1,5 @@
-﻿"BottomEdge"=20.86mm
-"TopEdge"=21.86mm
+﻿"BottomEdge"=21.15mm
+"TopEdge"=22.11mm
 "TotalHeight"=86.04mm
 "TotalLength"=73.76mm
 
