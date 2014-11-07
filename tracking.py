@@ -3,7 +3,7 @@ import math
 import serial
 import time
 
-ser = serial.Serial('COM4', 9600, timeout=0)
+ser = serial.Serial('/dev/tty.usbmodem1451', 9600, timeout=0)
 time.sleep(2)
 display = SimpleCV.Display()
 cam = SimpleCV.Camera(0, prop_set={"width":320,"height":240})
@@ -14,6 +14,7 @@ speed = 1
 
 goal = (0,0)
 shooting = 0
+readwait = False
 
 def drawCrossHair(img, pos, size=8, color=SimpleCV.Color.BLUE):
   width = 3;
@@ -42,25 +43,26 @@ while display.isNotDone():
   shooting = distance < 7
 
   if track:
-    xEn = int(goal[0] != pos[0]) << 4
-    xSign = int(goal[0] > pos[0]) << 3 #1 when positive, 0 negative
-    yEn = int(goal[1] > pos[1]) << 2
-    ySign = int(goal[1] > pos[1]) << 1
-    t = int(shooting)
-    command = xEn | xSign | yEn | ySign | t
-    ser.write(bin(command)); #send command
-    #map from [0,1] to [-1,1]
-    pos[0] += (2*int(goal[0] > pos[0])-1)
-    pos[1] += (2*int(goal[1] > pos[1])-1)
-    #don't act again until the 
-    readwait = True
-    while readwait = True:
-        if ser.read(64): readwait = False
-        if normaldisplay:
-            img.show()
-        else:
-            #segmented.show()
-            flippedDist.show()
+    if not readwait:
+      xEn = int(goal[0] != pos[0]) << 4
+      xSign = int(goal[0] > pos[0]) << 3 #1 when positive, 0 negative
+      yEn = int(goal[1] > pos[1]) << 2
+      ySign = int(goal[1] > pos[1]) << 1
+      t = int(shooting)
+      command = xEn | xSign | yEn | ySign | t
+      ser.write(chr(command)) #send command
+      print "Command: ", chr(command)
+      # print chr(command)
+      #map from [0,1] to [-1,1]
+      pos[0] += (2*int(goal[0] > pos[0])-1)
+      pos[1] += (2*int(goal[1] > pos[1])-1)
+      # don't act again until the 
+      readwait = True
+    else:
+      conf = ser.read(64)
+      if conf:
+        print "response: ", type(conf), conf
+        readwait = False
 
   if shooting: drawCrossHair(img, pos, size=12, color=SimpleCV.Color.GREEN)
   else: drawCrossHair(img, pos, size=8, color=SimpleCV.Color.BLACK) 
