@@ -16,4 +16,4 @@
 "MotorMountLegLength"=.25in
 "GearOffset"=.264907in
 "SlotSpacing"=.25in
-"MotorMountWidth"=1.86457in
+"MotorMountWidth"=1.72204724
