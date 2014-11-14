@@ -1,0 +1,13 @@
+﻿"vigorwidth"= 0.472441in
+"vigorflangewidth"= 0.731102in
+"vigorflangelength"= 0.131102in
+"vigorscrewsize"= 0.066535in
+"vigorholeoffsetwid"= 0.0646653in
+"vigorholeoffsetlen"= 0.065551in
+"vigorflangedepth"= 0.0901575in
+"vigordiscdepth"= 0.0492126in
+"vigormotordepth"= 1.12362in
+"vigortipdepth"= 0.259055in
+"vigoraxlewidth"= 0.173622in
+"vigorcutlen"= 0.0480315in
+"vigoraxledepth"= 0.159055in
