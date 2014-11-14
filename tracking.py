@@ -3,18 +3,20 @@ import math
 import serial
 import time
 
-ser = serial.Serial('/dev/tty.usbmodem1451', 9600, timeout=0)
+ser = serial.Serial('/dev/tty.usbmodem1411', 9600)
 time.sleep(2)
 display = SimpleCV.Display()
 cam = SimpleCV.Camera(0, prop_set={"width":320,"height":240})
 normaldisplay = True
 
 pos = [0,0]
-speed = 1
+speed = 10
 
 goal = (0,0)
 shooting = 0
 readwait = False
+ser.flushInput()
+ser.flushOutput()
 
 def drawCrossHair(img, pos, size=8, color=SimpleCV.Color.BLUE):
   width = 3;
@@ -35,6 +37,8 @@ while display.isNotDone():
   if blobs:
     for blob in blobs:
       track = True
+      img.drawCircle((blob.x, blob.y), 10, SimpleCV.Color.BLUE, 3)
+      dist.drawCircle((blob.x, blob.y), 10, SimpleCV.Color.BLUE, 3)
       goal = blob.x, blob.y
       distance = math.sqrt((goal[0]-pos[0])**2+(goal[1]-pos[1])**2)
   else:
@@ -43,27 +47,21 @@ while display.isNotDone():
   shooting = distance < 7
 
   if track:
-    if not readwait:
-      xEn = int(goal[0] != pos[0]) << 4
-      xSign = int(goal[0] > pos[0]) << 3 #1 when positive, 0 negative
-      yEn = int(goal[1] > pos[1]) << 2
-      ySign = int(goal[1] > pos[1]) << 1
-      t = int(shooting)
-      command = xEn | xSign | yEn | ySign | t
-      ser.write(chr(command)) #send command
-      print "Command: ", chr(command)
-      # print chr(command)
-      #map from [0,1] to [-1,1]
-      pos[0] += (2*int(goal[0] > pos[0])-1)
-      pos[1] += (2*int(goal[1] > pos[1])-1)
-      # don't act again until the 
-      readwait = True
-    else:
-      conf = ser.read(64)
-      if conf:
-        print "response: ", type(conf), conf
-        readwait = False
-
+    # if not readwait:
+    xEn = int(goal[0] != pos[0]) << 4
+    xSign = int(goal[0] > pos[0]) << 3 #1 when positive, 0 negative
+    yEn = int(goal[1] != pos[1]) << 2
+    ySign = int(goal[1] > pos[1]) << 1
+    t = int(shooting)
+    command = xEn | xSign | yEn | ySign | t
+    ser.write(chr(command)) #send command
+    print "Command: ", bin(command)
+    #map from [0,1] to [-1,1]
+    pos[0] += speed*(2*int(goal[0] > pos[0])-1)
+    pos[1] += speed*(2*int(goal[1] > pos[1])-1)
+    conf = ser.read(1)
+    print "response: ", ord(conf)
+    
   if shooting: drawCrossHair(img, pos, size=12, color=SimpleCV.Color.GREEN)
   else: drawCrossHair(img, pos, size=8, color=SimpleCV.Color.BLACK) 
 
