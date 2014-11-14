@@ -10,7 +10,7 @@ Adafruit_MotorShield AFMS = Adafruit_MotorShield();
 Adafruit_DCMotor *myMotor = AFMS.getMotor(1);
 
 int motorspeed = 0;
-String incoming = "";
+byte incoming;
 
 void setup() {
   Serial.begin(9600);
@@ -26,19 +26,9 @@ void setup() {
 void loop() {
   if (Serial.available() > 0) { //check for new data
     //convert new data to an int for motorspeed
-    incoming = Serial.readString();
-    motorspeed = incoming.toInt();
-  }
-  //cut power if speed = 0, just to save the motor
-  //straight up motorspeed for forwards movement
-  if (motorspeed > 0) {
-    myMotor->setSpeed(motorspeed);
-    myMotor->run(FORWARD);
-  }
-  //reverse the motorspeed for backwards movement
-  else {
-    myMotor->setSpeed(-1*motorspeed);
-    myMotor->run(BACKWARD);
+    incoming = Serial.read();
+    delay(1000);
+    Serial.print(incoming);
   }
 }
 
