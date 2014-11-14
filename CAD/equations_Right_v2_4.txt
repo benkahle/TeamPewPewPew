@@ -1,0 +1,44 @@
+﻿"BottomEdge"=21.20mm
+"TopEdge"=21.63mm
+"TotalHeight"=86.04mm
+"TotalLength"=73.76mm
+
+"Screw Clearance" = 10mm
+"ScrewClearanceBottom" = 25mm
+"TopDepth"= 11.15mm
+"BottomDepth"=10.15mm
+"TopHeight"=9.775mm
+"BottomHeight"=15.49mm
+
+"TopChannelDepth"=2.59mm
+"BottomChannelDepth"=2.318mm
+"ChannelHeight"=10mm
+
+"ChanRelHeight"=23.99mm
+"ChanRelDepth"=5.492mm
+"ChamberRadius"=16.261mm
+
+"CageScrewDiameter"=4.8mm
+"SetScrewDiameter"=3.5mm
+
+"AxleRadius"=6.639mm
+"KeyHeight"=1.619mm
+"KeyWidth"=2.662mm
+
+"HoseWindowWidth"=16.29mm
+"HoseWindowHeight"=26.5mm
+
+"HoseWindow-Edge"=8.89mm
+"CageScrew-VerticalEdge"=5.0mm
+"CageScrew-HorizontalEdge"=7.5mm
+"CageScrew-HoseCornerScrewEdge"=4.45mm
+
+"Axle-BottomEdge"=56.05mm
+"Axle-FrontEdge"=46.03mm
+
+"FrontSetScrew-Axel"=40mm
+"BackSetScrew-Axel"=22mm
+
+"SlotFront"=15mm
+"SlotBottom"=6.35mm
+"Slot"=6.35mm
