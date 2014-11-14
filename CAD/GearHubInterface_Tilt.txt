@@ -1,0 +1,9 @@
+"GearFaceDiameter"=24.40mm
+"CylinderLength"=15.00mm
+
+"ScrewHole-Center"=8.70mm
+"ScrewHoleDiameter"=5.04mm
+"CenterHoleDiameter"=9.50mm
+"ShaftCollarSideLength"=19.00mm
+"ShaftCollarDockingDepth"=7.00mm
+
