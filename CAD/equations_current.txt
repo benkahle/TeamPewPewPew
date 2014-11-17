@@ -1,7 +1,7 @@
-"CageLeftBottomEdge"=21.15mm
+"CageLeftBottomEdge"=22.11mm
 "CageLeftTopEdge"=22.11mm
 
-"CageRightBottomEdge"=21.20mm
+"CageRightBottomEdge"=21.63mm
 "CageRightTopEdge"=21.63mm
 
 "CageHeight"=86.04mm
@@ -11,20 +11,20 @@
 "CageBottomScrewClearance"=25mm
 
 "CageLeftTopDepth"= 11.65mm
-"CageLeftBottomDepth"=10.15mm
-"CageLeftTopHeight"=10.56175mm
+"CageLeftBottomDepth"=11.11mm
+"CageLeftTopHeight"=8.56175mm
 "CageLeftBottomHeight"=16mm
 
-"CageRightTopDepth"= 11.15mm
-"CageRightBottomDepth"=10.15mm
-"CageRightTopHeight"=9.775mm
+"CageRightTopDepth"= 11.05mm
+"CageRightBottomDepth"=10.58mm
+"CageRightTopHeight"=9.6mm
 "CageRightBottomHeight"=15.49mm
 
 "CageLeftTopChannelDepth"=2.41908mm
 "CageLeftBottomChannelDepth"=2.588mm
 "CageLeftChannelHeight"=11.7mm
 
-"CageRightTopChannelDepth"=2.59mm
+"CageRightTopChannelDepth"=2.32mm
 "CageRightBottomChannelDepth"=2.318mm
 "CageRightChannelHeight"=10mm
 
@@ -81,6 +81,8 @@
 "MotorMountLegLength"=.25in
 "GearOffset"=.264907in
 "TriggerSlotSpacing"=.25in
+"TriggerMiniSlotWidth"=3.5mm
+"TriggerRackWidth"=6.5mm
 
 "TGMGearFaceDiameter"=24.40mm
 "TGMCylinderLength"=15.00mm
@@ -90,3 +92,16 @@
 "TGMCenterHoleDiameter"=9.50mm
 "TGMShaftCollarSideLength"=19.00mm
 "TGMShaftCollarDockingDepth"=7.00mm
+
+"whitemotordepth"=11.27mm
+"whitemotorbackdepth"=3.845mm
+"whitemotoraxledepth" = 3.5mm
+"whitemotoraxleoffset"=11.4mm
+"whitemotorwidth"=12.07mm
+"whitemotorheight"=16.68mm
+"whitemotorcylinderlength" =13.04mm
+"whitemotorcylinderradius"=3.845mm
+"whitemotorcylinderoffset"=2.35mm
+"whitemotorcutoutlength"=1.88mm
+"whitemotorouterrad"=5mm
+"whitemotorinnerrad"=2.95mm
