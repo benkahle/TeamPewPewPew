@@ -1,0 +1,107 @@
+"CageLeftBottomEdge"=22.11mm
+"CageLeftTopEdge"=22.11mm
+
+"CageRightBottomEdge"=21.63mm
+"CageRightTopEdge"=21.63mm
+
+"CageHeight"=86.04mm
+"CageLength"=73.76mm
+
+"CageTopScrewClearance"=10mm
+"CageBottomScrewClearance"=25mm
+
+"CageLeftTopDepth"= 11.65mm
+"CageLeftBottomDepth"=11.11mm
+"CageLeftTopHeight"=8.56175mm
+"CageLeftBottomHeight"=16mm
+
+"CageRightTopDepth"= 11.05mm
+"CageRightBottomDepth"=10.58mm
+"CageRightTopHeight"=9.6mm
+"CageRightBottomHeight"=15.49mm
+
+"CageLeftTopChannelDepth"=2.41908mm
+"CageLeftBottomChannelDepth"=2.588mm
+"CageLeftChannelHeight"=11.7mm
+
+"CageRightTopChannelDepth"=2.32mm
+"CageRightBottomChannelDepth"=2.318mm
+"CageRightChannelHeight"=10mm
+
+"CageChanRelHeight"=23.99mm
+"CageChanRelDepth"=5.492mm
+"CageChamberRadius"=16.261mm
+
+"CageScrewDiameter"=4.8mm
+"CageSetScrewDiameter"=3.5mm
+
+"CageAxleRadius"=6.639mm
+"CageAxleKeyHeight"=1.619mm
+"CageAxleKeyWidth"=2.662mm
+
+"CageHoseWindowWidth"=16.29mm
+"CageHoseWindowHeight"=26.5mm
+
+"CageHoseWindow-Edge"=8.89mm
+"CageScrew-VerticalEdge"=5.0mm
+"CageScrew-HorizontalEdge"=7.5mm
+"CageScrew-HoseCornerScrewEdge"=4.45mm
+
+"CageAxle-BottomEdge"=56.05mm
+"CageAxle-FrontEdge"=46.03mm
+
+"CageBackSetScrew-Axle"=40mm
+"CageFrontSetScrew-Axle"=22mm
+
+"CageVelocityWindow-BackEdge"=34.8mm
+"CageVelocityWindow-BottomEdge"=27.55mm
+"CageVelocityWindowHeight"=22.29mm
+"CageVelocityWindowWidth"=12.61mm
+
+"TriggerSlot-BottomEdge"=6.35mm
+"TriggerSlot-FrontEdge"=15mm
+"TriggerSlotSize"=6.7mm
+
+"vigorwidth"= 0.472441in
+"vigorflangewidth"= 0.731102in
+"vigorflangelength"= 0.131102in
+"vigorscrewsize"= 0.066535in
+"vigorholeoffsetwid"= 0.0646653in
+"vigorholeoffsetlen"= 0.065551in
+"vigorflangedepth"= 0.0901575in
+"vigordiscdepth"= 0.0492126in
+"vigormotordepth"= 1.12362in
+"vigortipdepth"= 0.259055in
+"vigoraxlewidth"= 0.173622in
+"vigorcutlen"= 0.0480315in
+"vigoraxledepth"= 0.159055in
+
+"TriggerRackOffset"=.236224in
+"TriggerSlotSizeInt"=.25in
+"MotorMountLegLength"=.25in
+"GearOffset"=.264907in
+"TriggerSlotSpacing"=.25in
+"TriggerMiniSlotWidth"=3.5mm
+"TriggerRackWidth"=6.5mm
+
+"TGMGearFaceDiameter"=24.40mm
+"TGMCylinderLength"=15.00mm
+
+"TGMScrewHole-Center"=8.70mm
+"TGMScrewHoleDiameter"=5.04mm
+"TGMCenterHoleDiameter"=9.50mm
+"TGMShaftCollarSideLength"=19.00mm
+"TGMShaftCollarDockingDepth"=7.00mm
+
+"whitemotordepth"=11.27mm
+"whitemotorbackdepth"=3.845mm
+"whitemotoraxledepth" = 3.5mm
+"whitemotoraxleoffset"=11.4mm
+"whitemotorwidth"=12.07mm
+"whitemotorheight"=16.68mm
+"whitemotorcylinderlength" =13.04mm
+"whitemotorcylinderradius"=3.845mm
+"whitemotorcylinderoffset"=2.35mm
+"whitemotorcutoutlength"=1.88mm
+"whitemotorouterrad"=5mm
+"whitemotorinnerrad"=2.95mm
