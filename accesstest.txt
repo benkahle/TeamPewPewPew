@@ -1,3 +1,0 @@
-Pull this file, add a line, and push it back to prove that you have access to this repo.
-
-I, Logan Davis, have pushed accesstest.txt to Git.
