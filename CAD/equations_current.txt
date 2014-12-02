@@ -124,6 +124,23 @@
 "stepperdepthoffset"=24mm
 "stepperhorizoffset"=22.91mm
 
+"shaftslotOD"=18.8mm
+"shaftslotID"=13.28mm
+"shaftkeywidth"=2.67mm
+"shaftkeydepth"=1.8mm
+"shaftcollartotaldepth"=12.5mm
+"shaftsquaredepth"=6mm
+"shaftsetscrewsize"=3.5mm
+"shaftkeytightdepth"=1.85mm
+"shaftslottightID"=12.78mm
+"shaftsetscrewoffset"=9mm
+
+"cagecollartotaldepth"=10mm
+"cagecollartotalwidth"=35mm
+"cagecollarbasedepth"=4mm
+
+
+
 
 
 
