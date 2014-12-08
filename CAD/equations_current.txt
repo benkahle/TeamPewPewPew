@@ -70,14 +70,8 @@
 "TriggerMiniSlotWidth"=3.5mm
 "TriggerRackWidth"=6.5mm
 
-"TGMGearFaceDiameter"=24.40mm
-"TGMCylinderLength"=15.00mm
-
-"TGMScrewHole-Center"=8.70mm
-"TGMScrewHoleDiameter"=5.04mm
-"TGMCenterHoleDiameter"=9.50mm
-"TGMShaftCollarSideLength"=19.00mm
-"TGMShaftCollarDockingDepth"=7.00mm
+"gearhubintdiam"=30mm
+"gearhubintwid"=15mm
 
 "whitemotordepth"=11.27mm
 "whitemotorbackdepth"=3.845mm
@@ -110,19 +104,21 @@
 "towerslothorizoffset"=1in
 "towerslothorizspacing"=2in
 "towerslotvertoffset"=3in
-"towerslotvertspacing"=2in
+"towerslotvertspacing"=1in
 "towerheight"=12in
 "towerupslot"=1in
 "toweraxle"=.5in
-"towerplatslotoffset"=1.5in
-"towermotorpanelheight"=10in
-"towerplatdepth"=2in
+"towerspeedwidth"=2in
+"towerspeedheight"=8in
+"towerspeedgap"=2in
 
 "stepperouterrad"=10mm
 "stepperscrewsize"=3.45mm
 "stepperscrewc2c"=49.5mm
 "stepperdepthoffset"=24mm
 "stepperhorizoffset"=22.91mm
+"stepperaxleflat"=.037in
+"stepperaxlerad"=0.11811024in
 
 "shaftslotOD"=18.8mm
 "shaftslotID"=13.28mm
@@ -138,6 +134,40 @@
 "cagecollartotaldepth"=10mm
 "cagecollartotalwidth"=35mm
 "cagecollarbasedepth"=4mm
+
+"ajaxaxlesize"=3.87mm
+"ajaxinnercut"=2.3mm
+"ajaxwidth"=6.1mm
+"ajaxdiametral"=25.8854
+"ajaxcutoutdepth"=2.3mm
+
+"ajax4020gap"=29.5mm
+"ajax4010gap"=24.5mm
+
+"ajax20hubbuffer"=6.1mm
+"ajax20hubholeoffset"=.19685in
+"ajax20hubholesize"=.059055in
+"ajax20cutoutint"=13.4mm
+
+"ajax40hubholesize"=7.21mm
+"ajax40hubholeoffset"=10mm
+"ajax40hubbuffer"=8.9mm
+"ajax40cutoutint"=32.6mm
+
+"bearingpandiscrad"=6.8in
+"bearingpandiscang"=48.75deg
+"bearingclearholedist"=4.7345in
+"bearingclearholesize"=.5in
+"bearingclearholeang"=22.5deg
+"bearingmountholedist"=4.25in
+"bearingwirehole"=1.5in
+
+"no6diam"=.146in
+
+"shortconangle"=20deg
+"shortconlen"=.875in
+"longconlen"=1.25in
+"longconangle"=15deg
 
 
 
