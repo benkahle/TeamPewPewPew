@@ -62,7 +62,7 @@
 "TriggerSlot-FrontEdge"=15mm
 "TriggerSlotSize"=6.7mm
 
-"TriggerRackOffset"=.236224in
+"TriggerRackOffset"=6mm
 "TriggerSlotSizeInt"=.25in
 "MotorMountLegLength"=.25in
 "GearOffset"=.264907in
@@ -73,29 +73,19 @@
 "gearhubintdiam"=30mm
 "gearhubintwid"=15mm
 
-"whitemotordepth"=11.27mm
-"whitemotorbackdepth"=3.845mm
-"whitemotoraxledepth" = 3.5mm
-"whitemotoraxleoffset"=11.4mm
-"whitemotorwidth"=12.07mm
-"whitemotorheight"=16.68mm
-"whitemotorcylinderlength" =13.04mm
-"whitemotorcylinderradius"=3.845mm
-"whitemotorcylinderoffset"=2.35mm
-"whitemotorcutoutlength"=1.88mm
-"whitemotorouterrad"=5mm
-"whitemotorinnerrad"=2.95mm
-
-"elasticracklength"=2in
-"elasticrackpegsize"=.25in
-"elasticrackpegbuffer"=.125in
-"elasticrackpegspacing"=1.76476378in
-"elasticbaybuffer"=.25in
-"elasticdepth"=.125in
-"elasticbaydepth"=.75in
-
-"motormountwidth"=12mm
-"motormountcornerfillet"=3mm
+"vigorwidth"= 0.472441in
+"vigorflangewidth"= 0.731102in
+"vigorflangelength"= 0.131102in
+"vigorscrewsize"= 0.066535in
+"vigorholeoffsetwid"= 0.0646653in
+"vigorholeoffsetlen"= 0.065551in
+"vigorflangedepth"= 0.0901575in
+"vigordiscdepth"= 0.0492126in
+"vigormotordepth"= 1.12362in
+"vigortipdepth"= 0.259055in
+"vigoraxlewidth"= 0.173622in
+"vigorcutlen"= 0.0480315in
+"vigoraxledepth"= 0.159055in
 
 "pandiscradius"=14in
 "towermaterialwidth"=.25in
