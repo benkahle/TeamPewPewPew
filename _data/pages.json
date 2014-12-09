@@ -1,0 +1,26 @@
+[
+  {
+    "name": "index",
+    "display": "Home"
+  },
+  {
+    "name": "process",
+    "display": "process"
+  },
+  {
+    "name": "mech",
+    "display": "Mechanical Design"
+  },
+  {
+    "name": "software",
+    "display": "Software"
+  },
+  {
+    "name": "electric",
+    "display": "Electronics"
+  },
+  {
+    "name": "about",
+    "display": "About Us"
+  }
+]

@@ -1,0 +1,28 @@
+.header_menu {
+
+}
+
+.header_menu_item {
+  /*width: 16.166%;*/
+  display: inline-block;
+  text-align: center;
+  padding: 0 14px 0 14px;
+  border: solid;
+  border-radius: 1px;
+  border-width: 3px;
+  border-color: gray;
+}
+
+.header_menu_item .narrow {
+  /*width: 10%;*/
+}
+
+.header_menu_item .wide {
+  /*width: 16.166%;*/
+  display: inline-block;
+  text-align: center;
+}
+
+.header_menu_item {
+  color: white;
+}

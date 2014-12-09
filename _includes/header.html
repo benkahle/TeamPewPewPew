@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Team Pew Pew Pew : ">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/style.css">
+
+    <title>{{page.title}}</title>
+  </head>
+
+  <body>
+<div id="header_wrap" class="outer">
+    <header class="inner">
+      <h1 id="project_title">Team Pew Pew Pew</h1>
+      <div class="header_menu">
+      {% for page in site.data.pages %}
+        <a href="{{page.name}}.html">
+          <div class="header_menu_item">{{page.display}}</div>
+        </a>
+      {% endfor %}
+      </div>
+    </header>
+</div>
