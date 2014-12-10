@@ -71,7 +71,7 @@
 "TriggerRackWidth"=6.5mm
 
 "gearhubintdiam"=30mm
-"gearhubintwid"=15mm
+"gearhubintwid"=12.21mm
 
 "vigorwidth"= 0.472441in
 "vigorflangewidth"= 0.731102in
@@ -114,7 +114,7 @@
 "shaftslotID"=13.28mm
 "shaftkeywidth"=2.67mm
 "shaftkeydepth"=1.8mm
-"shaftcollartotaldepth"=12.5mm
+"shaftcollartotaldepth"=9.71mm
 "shaftsquaredepth"=6mm
 "shaftsetscrewsize"=3.5mm
 "shaftkeytightdepth"=1.85mm
@@ -158,6 +158,8 @@
 "shortconlen"=.875in
 "longconlen"=1.25in
 "longconangle"=15deg
+
+"BrassInsertDiameter"=5.04mm
 
 
 
