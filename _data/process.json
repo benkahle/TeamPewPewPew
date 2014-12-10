@@ -1,0 +1,28 @@
+{
+  "title":
+    "Design Process",
+  "headerImages": [
+    "images/rev1thumb.jpg",
+    "images/finalthumb.jpg"
+  ],
+  "sprintIntro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce fringilla vulputate lorem ut facilisis. Aliquam id orci sit amet mi efficitur lobortis eget vel magna. Vivamus fermentum, nisl vel malesuada lacinia, erat orci viverra mauris, in varius leo dui sed sem. Vestibulum non orci in massa ullamcorper interdum. Vestibulum posuere sem eget elit semper, vitae tincidunt nibh finibus. Vestibulum rutrum hendrerit eros. Fusce rhoncus convallis nisi, nec iaculis turpis sagittis ac. Duis scelerisque venenatis ante, nec tristique arcu ultrices vitae. Cras facilisis non mauris gravida vehicula. Duis massa elit, interdum id imperdiet vitae, congue viverra metus.",
+  "budgetDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce fringilla vulputate lorem ut facilisis. Aliquam id orci sit amet mi efficitur lobortis eget vel magna. Vivamus fermentum, nisl vel malesuada lacinia, erat orci viverra mauris, in varius leo dui sed sem. Vestibulum non orci in massa ullamcorper interdum. Vestibulum posuere sem eget elit semper, vitae tincidunt nibh finibus.",
+  "budgetImage":"images/budget.jpg",
+  "sprints": [
+    {
+      "title": "Starting Out",
+      "image": "images/sprint1thumb.jpg",
+      "brief": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce fringilla vulputate lorem ut facilisis."
+    },
+    {
+      "title": "Premature Stabilization",
+      "image": "images/sprint2thumb.jpg",
+      "brief": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce fringilla vulputate lorem ut facilisis."
+    },
+    {
+      "title": "Making it Work",
+      "image": "images/sprint3thumb.jpg",
+      "brief": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce fringilla vulputate lorem ut facilisis."
+    }
+  ]
+}

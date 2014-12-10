@@ -1,4 +1,25 @@
 ---
 layout: default
 ---
-<h3>Process:</h3>
+<h2>{{site.data.process.title}}</h2>
+<div class="wrapper">
+{% for image in site.data.process.headerImages %}
+  <img class="header-image-2" src="{{image}}"/>
+{% endfor %}
+<h3>Strategy</h3>
+<h4>Sprints</h4>
+<p>{{site.data.process.sprintIntro}}</p>
+<div class="wrapper">
+{% for sprint in site.data.process.sprints %}
+  <div class="panel-33">
+    <img src="{{sprint.image}}"/>
+    <h4>{{sprint.title}}</h4>
+    <p>
+      {{sprint.brief}}
+    </p>
+  </div>
+{% endfor %}
+</div>
+<h3>Components</h3>
+<p>{{site.data.process.budgetDescription}}</p>
+<img src="{{site.data.process.budgetImage}}"/>
