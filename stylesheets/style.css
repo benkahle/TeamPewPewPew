@@ -1,0 +1,65 @@
+.header_menu {
+
+}
+
+.header_menu_item {
+  /*width: 16.166%;*/
+  display: inline-block;
+  text-align: center;
+  padding: 0 14px 0 14px;
+  border: solid;
+  border-radius: 1px;
+  border-width: 3px;
+  border-color: gray;
+  color: white;
+}
+
+.header_menu_item .narrow {
+  /*width: 10%;*/
+}
+
+.header_menu_item .wide {
+  /*width: 16.166%;*/
+  display: inline-block;
+  text-align: center;
+}
+
+.header_menu_item:hover {
+  background: #666;
+}
+
+.panel-25 {
+  width: 25%;
+  display: inline-block;
+}
+
+.panel-33 {
+  width: 32.9%;
+  display: inline-block;
+}
+
+.panel-75 {
+  width: 73%;
+  display: inline-block;
+}
+
+.bio-image {
+  width: 94%;
+  height: auto;
+}
+
+.bio-text {
+  padding-left: 5px;
+  vertical-align: top;
+}
+
+.bio-header h4 {
+  display: inline-block;
+}
+
+.bio-info {
+  display: inline-block;
+  font-size: 18px;
+  vertical-align: top;
+  padding: 5px 0px 0px 2px;
+}
