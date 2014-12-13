@@ -160,6 +160,7 @@
 "longconangle"=15deg
 
 "BrassInsertDiameter"=5.04mm
+"AxleLength" = 5.00in
 
 
 
