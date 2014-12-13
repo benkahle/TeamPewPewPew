@@ -121,7 +121,7 @@
 "shaftslottightID"=12.78mm
 "shaftsetscrewoffset"=9mm
 
-"cagecollartotaldepth"=10mm
+"cagecollartotaldepth"=20mm
 "cagecollartotalwidth"=35mm
 "cagecollarbasedepth"=4mm
 
