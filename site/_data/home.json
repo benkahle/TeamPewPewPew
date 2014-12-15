@@ -1,6 +1,7 @@
 {
   "title":
     "The Paintball Turret",
+  "titleImage": "images/home/Banner.PNG",
   "summary": 
     "<em>click, click, click, click..</em><br/>
 <strong>BAM <em>splat!</em></strong><br/>
@@ -9,19 +10,19 @@ For the last two months, as part of a class called Principles of Engineering, we
   "subsystems": [
     {
     "title": "Mechanical",
-    "image": "images/mech-thumb.jpg",
+    "image": "images/home/mechanical.JPG",
     "brief":
       "We mounted a modified Tippmann paintball marker on a pan/tilt gimbal powered by two stepper motors and two custom gear assemblies. After that, a custom 3D-printed trigger mechanism was all it took to make Pop Pop Pop go pew pew pew."
     },
     {
     "title": "Electrical",
-    "image": "images/elec-thumb.jpg",
+    "image": "images/home/electrical.jpg",
     "brief":
       "Automatic turrets can be pretty risky business - unless, that is, you build in safeties. We used a complex system of circuits and switches to power our system in the most efficient, least risky manner possible."
     },
     {
     "title": "Software",
-    "image": "images/soft-thumb.jpg",
+    "image": "images/home/softwareThumb.png",
     "brief":
       "Before you can destroy, you first have to search. We used SimpleCV (an open source computer vision library) and PySerial (a Python-to-Serial communications library) to make Pop Pop Pop the sharpest shooter around."
     }
