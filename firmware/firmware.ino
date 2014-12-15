@@ -9,20 +9,22 @@ Adafruit_MotorShield AFMS = Adafruit_MotorShield();
 Adafruit_StepperMotor *stepperY = AFMS.getStepper(48, 1); // Motor 1 L/R BYGR
 Adafruit_StepperMotor *stepperX = AFMS.getStepper(48, 2); // Motor 2 L/R BYGR
 
+//Pin numbers
 const int safePin = 4;
 const int xPosLimitPin = 5;
 const int xNegLimitPin = 6;
 const int yPosLimitPin = 7;
 const int yNegLimitPin = 8; 
-const int stepsPerCommand = 20;
+const int stepsPerCommand = 10;
+
+const int xEnIndex = 4;
+const int xSignIndex = 3;
+const int yEnIndex = 2;
+const int ySignIndex = 1;
+const int trigEnIndex = 0;
 
 int safe = 0;
 int resetIndex = 5;
-int xEnIndex = 4;
-int xSignIndex = 3;
-int yEnIndex = 2;
-int ySignIndex = 1;
-int trigEnIndex = 0;
 int frameWidth = 0;
 int frameHeight = 0;
 
@@ -41,6 +43,7 @@ void setup() {
   initialize();
 }
 
+// Motor command function wrapper
 void stepMotor(int stepSign, Adafruit_StepperMotor* stepper) {
   stepper->step(stepsPerCommand, stepSign, SINGLE);
 }
@@ -49,6 +52,7 @@ void shoot() {
 
 }
 
+// Initialization routine run on startup 
 void initialize() {
   int xPosLimit = !digitalRead(xPosLimitPin);
   int xNegLimit = !digitalRead(xNegLimitPin);
@@ -58,18 +62,19 @@ void initialize() {
   int xNegHit = 0;
   int yPosHit = 0;
   int yNegHit = 0;
+
   while (!xPosHit) {
     xPosLimit = !digitalRead(xPosLimitPin);
     if (xPosLimit) xPosHit = 1;
     stepMotor(1, stepperX);
     delay(200);
   }
-  // while (!yPosHit) {
-  //   yPosLimit = !digitalRead(yPosLimitPin);
-    // if (yPosLimit) yPosHit = 1;
-  //   stepMotor(1, stepperY);
-  //   delay(50);
-  // }
+  while (!yPosHit) {
+    yPosLimit = !digitalRead(yPosLimitPin);
+    if (yPosLimit) yPosHit = 1;
+    stepMotor(1, stepperY);
+    delay(50);
+  }
   while (!xNegHit) {
     xNegLimit = !digitalRead(xNegLimitPin);
     if (xNegLimit) xNegHit = 1;
@@ -77,13 +82,13 @@ void initialize() {
     frameWidth++;
     delay(200);
   }
-  // while (!yNegHit) {
-  //   yNegLimit = !digitalRead(yNegLimitPin);
-    // if (yNegLimit) yNegHit = 1;
-  //   stepMotor(0, stepperY);
-  //   frameHeight++;
-  //   delay(50);
-  // }
+  while (!yNegHit) {
+    yNegLimit = !digitalRead(yNegLimitPin);
+    if (yNegLimit) yNegHit = 1;
+    stepMotor(0, stepperY);
+    frameHeight++;
+    delay(50);
+  }
   Serial.write((byte)0); // Serial Sync message
   Serial.write((byte)255);
   Serial.write((byte)0);
@@ -94,8 +99,8 @@ void initialize() {
   stepperX->step(0,0,SINGLE);
   stepperY->step(0,0,SINGLE);
 
-  // byte fh = byte(frameHeight);
-  // Serial.write(fh);s
+  byte fh = byte(frameHeight);
+  Serial.write(fh);
 
   stepperX->release();
   stepperY->release();
@@ -126,7 +131,7 @@ void loop() {
         stepMotor(xSign, stepperX);
       }
       if (yEn) {
-        stepMotor(ySign, stepperY); //This is blocking currently
+        stepMotor(ySign, stepperY);
       }
       if (trigEn) {
         shoot();
@@ -134,7 +139,7 @@ void loop() {
       // if (!xEn || !yEn) { // For debugging only
       //   stepperY->release();
       // }
-      Serial.write(ySign); //send confirmation.
+      Serial.write(command); //send confirmation.
     }
   }
 }

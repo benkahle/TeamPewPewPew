@@ -1,0 +1,20 @@
+---
+title: Team Pew Pew Pew - The Team
+layout: default
+---
+<h2>{{site.data.about.title}}</h2>
+<p>{{site.data.about.summary}}</p>
+{% for person in site.data.about.people %}
+<div class="wrapper">
+  <div class="panel-25">
+    <img class="bio-image" src="{{person.image}}"/>
+  </div>
+  <div class="panel-75 bio-text">
+    <div class="bio-header wrapper">
+      <h4>{{person.name}} - </h4>
+      <p class="bio-info">{{person.info}}</p>
+    </div>
+    <p>{{person.bio}}</p>
+  </div>
+</div>
+{% endfor %}

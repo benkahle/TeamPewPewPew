@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Team Pew Pew Pew : ">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/style.css">
+
+    <title>Team Pew Pew Pew - Process</title>
+  </head>
+
+  <body>
+<div id="header_wrap" class="outer">
+    <header class="inner">
+      <h1 id="project_title">Team Pew Pew Pew</h1>
+      <div class="header_menu">
+      
+        <a href="index.html">
+          <div class="header_menu_item">Home</div>
+        </a>
+      
+        <a href="process.html">
+          <div class="header_menu_item">Process</div>
+        </a>
+      
+        <a href="mech.html">
+          <div class="header_menu_item">Mechanical Design</div>
+        </a>
+      
+        <a href="electric.html">
+          <div class="header_menu_item">Electronics</div>
+        </a>
+      
+        <a href="software.html">
+          <div class="header_menu_item">Software</div>
+        </a>
+      
+        <a href="about.html">
+          <div class="header_menu_item">About Us</div>
+        </a>
+      
+      </div>
+    </header>
+</div>
+<div id="main_content_wrap" class="outer">
+  <section id="main_content" class="inner">
+<h2>Design Process</h2>
+<div class="wrapper">
+
+  <img class="header-image-2" src="images/iterations/rev1.jpg"/>
+
+  <img class="header-image-2" src="images/finalthumb.jpg"/>
+
+<h3>Project Approach</h3>
+<p>Our team used the Scrum development process to create a finished system by iterating through successive minimum viable products. After picking our initial concept - a skeet-shooting paintball turret - and setting a goal of creating a system with unusually high production value, we embarked on our first sprint. To track and organize our work, we relied on Pivotal Tracker, an online productivity tool intended for use with Scrum. Code and CAD was stored in a central repository on GitHub, while meetings were coordinated over email. The duration of our work time comprised four two-week sprints, after two of which we presented our progress to our classmates in a design review which allowed us to receive constructive feedback. With this process infrastructure in place, we thought we had all the framework needed for a successful team project… but while we wound up in a good place, the process did not always flow exactly as intended.</p>
+<h3>Safety Procedures</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce fringilla vulputate lorem ut facilisis. Aliquam id orci sit amet mi efficitur lobortis eget vel magna. Vivamus fermentum, nisl vel malesuada lacinia, erat orci viverra mauris, in varius leo dui sed sem. Vestibulum non orci in massa ullamcorper interdum. Vestibulum posuere sem eget elit semper, vitae tincidunt nibh finibus. Vestibulum rutrum hendrerit eros. Fusce rhoncus convallis nisi, nec iaculis turpis sagittis ac. Duis scelerisque venenatis ante, nec tristique arcu ultrices vitae. Cras facilisis non mauris gravida vehicula. Duis massa elit, interdum id imperdiet vitae, congue viverra metus.</p>
+<div class="wrapper">
+
+  <div class="wrapper">
+  
+  
+    <div class="panel-75">
+      <div class="process-sprint-header wrapper">
+        <h4>Scope and Rapid Prototype</h4>
+      </div>
+      <p>Our project began with a bang as we rapidly acquired a marker and tested it to evaluate its accuracy, adjust the firing velocity, and determine basic system parameters and requirements to consider in planning the scope of the project. Based on these tests, we created our project goal of an automatic paintball skeet shooter and outlined a safety plan to receive project approval. For organizing our project work, we decided to use Pivotal Tracker and established a basic workflow routine as a team in addition to setting up a team Github repo for project work. After calculating the marker’s moment of inertia and the torque required to move the marker according to our project specifications, we developed initial plans for the pan and tilt system to move the marker. These ideas were implemented by constructing a gimbal prototype, designing a marker cage to hold the marker and demonstrating motor control. We also wrote motor communication and computer vision demos to familiarize ourselves with PySerial and SimpleCV.</p>
+    </div>
+    <div class="panel-25">
+      <img class="process-sprint-image" src="images/sprint1thumb.jpg"/>
+    </div>
+  
+</div>
+
+  <div class="wrapper">
+  
+  
+    <div class="panel-25">
+      <img class="process-sprint-image" src="images/sprint2thumb.jpg"/>
+    </div>
+    <div class="panel-75">
+      <div class="process-sprint-header wrapper">
+        <h4>Initial Partially-Integrated Prototype</h4>
+      </div>
+      <p>In our second sprint we acquired a turntable bearing and a webcam, allowing us to improve the software and mechanical design. Additionally , we received the support of Olin’s designated safety personnel and the Babson police to move forward with testing and demonstrating our project. To continue project work, we fabricated a marker mount and a pan surface from scrap wood and PLA, as well as designed a first iteration of the trigger mechanism. From this progress, we could design appropriate gear and motor mounts. Using this prototype we developed our electrical system design and made a fully functional set of safety kill switches to ensure we could control the entire system while testing. More specifically, the range of motion for the pan and tilt were limited by two  limit switches in the plane of motion. A ‘deadman’ switch, which must be actively depressed for the marker to fire, was incorporated. We also demonstrated PySerial stepper motor control  (until our provisional wood gears stripped) and functional computer vision by using our software to identify objects of a specific color with a mounted webcam.</p>
+    </div>
+  
+</div>
+
+  <div class="wrapper">
+  
+  
+    <div class="panel-75">
+      <div class="process-sprint-header wrapper">
+        <h4>Exploring and Testing Prototype</h4>
+      </div>
+      <p>Our main objective in the third sprint was to improve the motor mounts and begin to more fully integrate the electrical, mechanical and software systems. We decided to take a new approach in our marker mount design by fabricating the upright supports out of locally sourced metal. However, in the end we decided not to use metal supports in the final product due to stability concerns, and reevaluated our project scope. This third sprint was valuable in altering the direction of our mechanical design for the final product. We iterated our trigger mechanism design to improve the functionality and identify the appropriate motors for the task. We also modified our power transmission based off of this prototype from worm gears in both axes to a full gearbox in our upright tower and a pinion driving our curved rack. The limit switches setup in the second sprint were used to to create a stepper motor initialization routine for the software system for integrating the webcam and pan axis system, and we were able to rotate the pan surface to follow a moving red mark.</p>
+    </div>
+    <div class="panel-25">
+      <img class="process-sprint-image" src="images/sprint3thumb.jpg"/>
+    </div>
+  
+</div>
+
+  <div class="wrapper">
+  
+  
+    <div class="panel-25">
+      <img class="process-sprint-image" src="images/sprint4thumb.jpg"/>
+    </div>
+    <div class="panel-75">
+      <div class="process-sprint-header wrapper">
+        <h4>Final Product</h4>
+      </div>
+      <p>The first step in creating the final product was to rapidly design and reconstruct a new, sturdier marker mount system from MDF for testing and integration of the computer vision system. This new design incorporates a gearbox for the gear train driving the tilt system as well as an incorporated motor mount on the tower. The pan surface was also updated to be laser cut from MDF and mount the upright towers supporting the marker. In this sprint, the trigger mechanism become functional using ? amps and a delrin trigger bar.</p>
+    </div>
+  
+</div>
+
+</div>
+<h3>Components</h3>
+<p>Our final iteration is mostly composed of laser cut MDF, 3D printed PLA components, plywood, and a galvanized steel turntable. We also have a number of limit switches, insert other electrical smoke and mirrors, and a webcam.</p>
+<img src="images/budget.jpg"/>
+  </section>
+</div>
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Team Pew Pew Pew - Olin College of Engineering: Principles of Engineering, Fall 2014</p>
+      </footer>
+    </div>
+  </body>
+</html>

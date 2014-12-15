@@ -1,0 +1,38 @@
+{
+  "title":
+    "About the Team",
+  "summary":
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce fringilla vulputate lorem ut facilisis. Aliquam id orci sit amet mi efficitur lobortis eget vel magna. Vivamus fermentum, nisl vel malesuada lacinia, erat orci viverra mauris, in varius leo dui sed sem.",
+  "people": [
+    {
+      "name": "Kelly Brennan",
+      "info": "Bioengineering, 2017",
+      "image": "images/team/kelly.jpeg",
+      "bio": "When she was three years old, Kelly did something wrong. She has spent the last sixteen years atoning for this sin. These days you can find her doing MechE things, waking up at ungodly hours, and generally being the best teammate anyone could ask for."
+    },
+    {
+      "name": "Logan Davis",
+      "info": "Engineering with Robotics, 2017",
+      "image": "images/team/logan.jpeg",
+      "bio": "Logan is a RoboE from Hawaii who works on everything to compensate for being particularly good at nothing. For some reason, the rest of the team decided to let him write their bios. This was a mistake."
+    },
+    {
+      "name": "Ry Horsey",
+      "info": "Engineering with Applied Mathematics, 2015",
+      "image": "images/team/ry.jpeg",
+      "bio": "Ry used to be a MechE, but now he isn’t. These days, his teammates point him in the general direction of some power electronics and let him wreak whatever havoc he desires. Seriously: all of our EE stuff could be smoke and mirrors, and we’d never know."
+    },
+    {
+      "name": "Ben Kahle",
+      "info": "Electrical and Computer Engineering, 2016",
+      "image": "images/team/ben.jpg",
+      "bio": "A particularly programmatical Seattleite once went 280 days without seeing the sun. When he finally emerged from his primordial shroud, he was the legendary man we now know as Ben Kahle. If you ever need a frisbee launched, a website coded, or a beard grown, you know who to call."
+    },
+    {
+      "name": "Maire Keene",
+      "info": "Mechanical Engineering, 2017",
+      "image": "images/team/maire.jpeg",
+      "bio": "Maire is fully versed in two distinct deadly arts: knife throwing and classical opera singing. Despite being from the great state of Utah, she is also a better MechE than you. Don’t try to argue... the last guy who did wound up with high notes on his ears and a dagger in his back."
+    }
+  ]
+}

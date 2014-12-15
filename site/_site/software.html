@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Team Pew Pew Pew : ">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/style.css">
+
+    <title>Team Pew Pew Pew - Software</title>
+  </head>
+
+  <body>
+<div id="header_wrap" class="outer">
+    <header class="inner">
+      <h1 id="project_title">Team Pew Pew Pew</h1>
+      <div class="header_menu">
+      
+        <a href="index.html">
+          <div class="header_menu_item">Home</div>
+        </a>
+      
+        <a href="process.html">
+          <div class="header_menu_item">Process</div>
+        </a>
+      
+        <a href="mech.html">
+          <div class="header_menu_item">Mechanical Design</div>
+        </a>
+      
+        <a href="electric.html">
+          <div class="header_menu_item">Electronics</div>
+        </a>
+      
+        <a href="software.html">
+          <div class="header_menu_item">Software</div>
+        </a>
+      
+        <a href="about.html">
+          <div class="header_menu_item">About Us</div>
+        </a>
+      
+      </div>
+    </header>
+</div>
+<div id="main_content_wrap" class="outer">
+  <section id="main_content" class="inner">
+<h2>Software</h2>
+<div class="wrapper">
+  <a href="https://github.com/benkahle/TeamPewPewPew" class="gh-button">
+    <span class="gh-icon"></span>
+    <span class="gh-text">View Source Code</span>
+  </a>
+</div>
+<div class="wrapper">
+  <h4>Architecture</h4>
+  <p>The software driving the turret is broken into two major parts: the computer vision processing running on a laptop and the motor driving firmware running on an arduino. The laptop code processes frames from the webcam, determines the direction to move the marker and sends commands to the arduino. The arduino code initializes the marker position to synchronize with the laptop, and commands the pan, tilt, and trigger motors based on the messages it receives from the laptop.</p>
+  <img class="full-width" src="images/software_architecture.png"/>
+</div>
+
+<div class="wrapper">
+  <h4>Computer Vision Processing (Python)</h4>
+  <p>The python code is composed of a few components. After setting up a serial connection with the arduino utilizing the <a href=http://pyserial.sourceforge.net/>PySerial python library</a>, the script sends a command to reset the arduino ensuring the laptop and arduino start synched. The script then blocks until it receives a message from the arduino with the number of horizontal and vertical steps the marker can make. This marks the completion of the marker initialization triggering the image processing to begin. <br/>The tracking loop begins by taking a frame from the webcam utilizing the <a href=http://simplecv.org/>SimpleCV python library</a>. We then filter the frame by finding the color distance from red and blur the resulting grayscale image, allowing us to find bright blobs within the image through edge detection. By convolving a circular mask, we determine which blobs are circular. These steps which are done with just a few SimpleCV method calls yield a list of all red circles in the image. <br/>Once a target is found the script calculates the direction from the current position towards the target and encodes a 5 bit message to the arduino that includes 1 bit for each of: X enable, X direction, Y enable, Y direction, and trigger enable. The script sends the command over serial, updates its record of the markers position, and the waits to receive a message from the arduino. The message confirms that the motor movements have been made to ensure that the tracking cannot move faster than the motors on the turret.</p> 
+</div>
+
+<div class="wrapper">
+  <h4>Arduino Motor Control (C++)</h4>
+  <p>The arduino directly controls the motor movements of the turret. When the system is turned on, an initialization routine will go from one edge of pan and tilt movement to the other, and upon completion will send the number of motor steps taken in each direction to the laptop over serial. This initialization allows the software to automatically account for a change in the range of motion of the turret and also guarantees that the image processing knows the starting position of the turret. <br/>After initialization the arduino enters the tracking loop where it constantly checks the safety state. If any limit switch is hit or if the deadman switch is released the arduino will do nothing. If the system is in a safe state, the arduino will check the serial queue for commands. If a command is present, the arduino will parse the 5 bits and step the motors in the requested directions. It will also cause a trigger cycle if the “fire” command is present.</p> 
+</div>
+
+  </section>
+</div>
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Team Pew Pew Pew - Olin College of Engineering: Principles of Engineering, Fall 2014</p>
+      </footer>
+    </div>
+  </body>
+</html>

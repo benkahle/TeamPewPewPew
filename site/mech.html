@@ -1,0 +1,43 @@
+---
+layout: default
+title: Team Pew Pew Pew - Mechanical System
+---
+<h2>{{site.data.mech.title}}</h2>
+<div class="wrapper">
+</div>
+{% for system in site.data.mech.systems %}
+<div class="wrapper">
+  {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+  {% if thecycle == 'odd' %}
+    <div class="panel-75">
+      <div class="mech-system-header wrapper">
+        <h4>{{system.name}}</h4>
+      </div>
+      <p>{{system.description}}</p>
+    </div>
+    <div class="panel-25">
+      <img class="mech-system-image" src="{{system.image}}"/>
+    </div>
+  {% else %}
+    <div class="panel-25">
+      <img class="mech-system-image" src="{{system.image}}"/>
+    </div>
+    <div class="panel-75">
+      <div class="mech-system-header wrapper">
+        <h4>{{system.name}}</h4>
+      </div>
+      <p>{{system.description}}</p>
+    </div>
+  {% endif %}
+  {% if system.video %}
+    <div class="video">
+      <iframe width="560" height="315" src="{{system.video}}" frameborder="0" allowfullscreen></iframe>
+    </div>
+    {% endif %}
+</div>
+{% endfor %}
+<div class="wrapper">
+  <img class="mech-footer-image" src="{{site.data.mech.finalCad}}"/>
+  <img class="mech-footer-image" src="{{site.data.mech.finalProduct}}"/>
+</div>
+

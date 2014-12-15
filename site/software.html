@@ -1,0 +1,22 @@
+---
+layout: default
+title: Team Pew Pew Pew - Software
+---
+<h2>{{site.data.software.title}}</h2>
+<div class="wrapper">
+  <a href="{{site.data.software.githubLink}}" class="gh-button">
+    <span class="gh-icon"></span>
+    <span class="gh-text">{{site.data.software.githubText}}</span>
+  </a>
+</div>
+<div class="wrapper">
+  <h4>Architecture</h4>
+  <p>{{site.data.software.overview}}</p>
+  <img class="full-width" src="{{site.data.software.architectureDiagram}}"/>
+</div>
+{% for section in site.data.software.sections %}
+<div class="wrapper">
+  <h4>{{section.title}}</h4>
+  <p>{{section.description}}</p> 
+</div>
+{% endfor %}

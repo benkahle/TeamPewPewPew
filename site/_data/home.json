@@ -1,0 +1,29 @@
+{
+  "title":
+    "The Paintball Turret",
+  "summary": 
+    "<em>click, click, click, click..</em><br/>
+<strong>BAM <em>splat!</em></strong><br/>
+We’re Team Pew Pew Pew. This is Project Pop Pop Pop.<br/>
+For the last two months, as part of a class called Principles of Engineering, we’ve been working to design and construct an automatic paintball turret that can locate and annihilate brightly colored balloons. Using SimpleCV, PySerial, an Arduino Uno with an Adafruit motor shield, a loaner Tippmann 98 Custom paintball marker, a smorgasbord of power electronics, and all of the fabrication resources Olin College has to offer, we managed to achieve just that. On this webpage you can learn all about our team and our project, from the fundamentals of process and planning to the dirty details of mechanical design. Check it out!",
+  "subsystems": [
+    {
+    "title": "Mechanical",
+    "image": "images/mech-thumb.jpg",
+    "brief":
+      "We mounted a modified Tippmann paintball marker on a pan/tilt gimbal powered by two stepper motors and two custom gear assemblies. After that, a custom 3D-printed trigger mechanism was all it took to make Pop Pop Pop go pew pew pew."
+    },
+    {
+    "title": "Electrical",
+    "image": "images/elec-thumb.jpg",
+    "brief":
+      "Automatic turrets can be pretty risky business - unless, that is, you build in safeties. We used a complex system of circuits and switches to power our system in the most efficient, least risky manner possible."
+    },
+    {
+    "title": "Software",
+    "image": "images/soft-thumb.jpg",
+    "brief":
+      "Before you can destroy, you first have to search. We used SimpleCV (an open source computer vision library) and PySerial (a Python-to-Serial communications library) to make Pop Pop Pop the sharpest shooter around."
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+---
+layout: default
+title: Team Pew Pew Pew - Process
+---
+<h2>{{site.data.process.title}}</h2>
+<div class="wrapper">
+{% for image in site.data.process.headerImages %}
+  <img class="header-image-2" src="{{image}}"/>
+{% endfor %}
+<h3>Project Approach</h3>
+<p>{{site.data.process.sprintIntro}}</p>
+<h3>Safety Procedures</h3>
+<p>{{site.data.process.safety}}</p>
+<div class="wrapper">
+{% for sprint in site.data.process.sprints %}
+  <div class="wrapper">
+  {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+  {% if thecycle == 'odd' %}
+    <div class="panel-75">
+      <div class="process-sprint-header wrapper">
+        <h4>{{sprint.title}}</h4>
+      </div>
+      <p>{{sprint.description}}</p>
+    </div>
+    <div class="panel-25">
+      <img class="process-sprint-image" src="{{sprint.image}}"/>
+    </div>
+  {% else %}
+    <div class="panel-25">
+      <img class="process-sprint-image" src="{{sprint.image}}"/>
+    </div>
+    <div class="panel-75">
+      <div class="process-sprint-header wrapper">
+        <h4>{{sprint.title}}</h4>
+      </div>
+      <p>{{sprint.description}}</p>
+    </div>
+  {% endif %}
+</div>
+{% endfor %}
+</div>
+<h3>Components</h3>
+<p>{{site.data.process.budgetDescription}}</p>
+<img src="{{site.data.process.budgetImage}}"/>

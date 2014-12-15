@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Team Pew Pew Pew : ">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/style.css">
+
+    <title>Team Pew Pew Pew - Mechanical System</title>
+  </head>
+
+  <body>
+<div id="header_wrap" class="outer">
+    <header class="inner">
+      <h1 id="project_title">Team Pew Pew Pew</h1>
+      <div class="header_menu">
+      
+        <a href="index.html">
+          <div class="header_menu_item">Home</div>
+        </a>
+      
+        <a href="process.html">
+          <div class="header_menu_item">Process</div>
+        </a>
+      
+        <a href="mech.html">
+          <div class="header_menu_item">Mechanical Design</div>
+        </a>
+      
+        <a href="electric.html">
+          <div class="header_menu_item">Electronics</div>
+        </a>
+      
+        <a href="software.html">
+          <div class="header_menu_item">Software</div>
+        </a>
+      
+        <a href="about.html">
+          <div class="header_menu_item">About Us</div>
+        </a>
+      
+      </div>
+    </header>
+</div>
+<div id="main_content_wrap" class="outer">
+  <section id="main_content" class="inner">
+<h2>Mechanical Design</h2>
+<div class="wrapper">
+</div>
+
+<div class="wrapper">
+  
+  
+    <div class="panel-75">
+      <div class="mech-system-header wrapper">
+        <h4>Pan</h4>
+      </div>
+      <p>A lazy susan supports the pan surface allowing the marker mount to move horizontally.The motion is controlled using a mounted stepper motor that interfaces with  a curved gearing rack that we designed and 3D printed. This system has a gear ratio of 1:36 allowing the rack to move at # degrees per step. Limit switches and mechanical stops constrict the marker movement to a ninety degree range.</p>
+    </div>
+    <div class="panel-25">
+      <img class="mech-system-image" src=""/>
+    </div>
+  
+  
+    <div class="video">
+      <iframe width="560" height="315" src="//www.youtube.com/embed/o_Ij41_7AIk" frameborder="0" allowfullscreen></iframe>
+    </div>
+    
+</div>
+
+<div class="wrapper">
+  
+  
+    <div class="panel-25">
+      <img class="mech-system-image" src=""/>
+    </div>
+    <div class="panel-75">
+      <div class="mech-system-header wrapper">
+        <h4>Tilt</h4>
+      </div>
+      <p>Our system tilts the paintball marker by using a stepper motor to drive a 16:1 custom gearbox mounted atop a laser-cut tower. Due to the tight tolerances required by (and frictional forces inherent in) a multi-stage gearbox, the tilt mechanism proved to be much more of a challenge to design and fabricate than the pan mechanism. Between gear slop, axle friction, and off-center marker weight, our first “production” revision could not reliably tilt the marker. However, after a day’s worth of relatively simple modifications to the marker mounting uprights, we (hopefully) managed to get the marker tilting at windmills like Don Quixote.</p>
+    </div>
+  
+  
+</div>
+
+<div class="wrapper">
+  
+  
+    <div class="panel-75">
+      <div class="mech-system-header wrapper">
+        <h4>Marker Mount</h4>
+      </div>
+      <p>To facilitate accurate and stable aiming, we custom-CADed and 3D printed a plastic mount that fits around our paintball marker. This mount is the functional heart of our mechanical design: many of the other subsystems, like the trigger and the tilt gearbox, rely on its design. The plastic mount is supported on each side by an axle extending through a pair of 12” MDF vertical uprights. The uprights were carefully laser-cut and assembled for maximum ease of assembly while retaining stability. Speed holes in the side panels allow for easy access to system components during assembly and add style points.</p>
+    </div>
+    <div class="panel-25">
+      <img class="mech-system-image" src=""/>
+    </div>
+  
+  
+</div>
+
+<div class="wrapper">
+  
+  
+    <div class="panel-25">
+      <img class="mech-system-image" src=""/>
+    </div>
+    <div class="panel-75">
+      <div class="mech-system-header wrapper">
+        <h4>Marker Modification</h4>
+      </div>
+      <p>Before our paintball marker could be safely and easily operated by an autonomous system, we had to make a pair of key modifications. First, we dropped the firing pressure on the marker all the way to its absolute minimum, hoping that this would alleviate some safety concerns by reducing paintball muzzle velocity. Second, we replaced the marker’s internal trigger spring with a weaker spring <a href=http://www.paintballforum.com/tippmann-pneumatics/75424-official-mod-thread.html>from a clicky pen</a> so as to enable easier trigger firing. Without the former modification we would not have been allowed to proceed with the project; without the later we would’ve had to shell out for expensive motors to operate the trigger safely.</p>
+    </div>
+  
+  
+</div>
+
+<div class="wrapper">
+  
+  
+    <div class="panel-75">
+      <div class="mech-system-header wrapper">
+        <h4>Trigger</h4>
+      </div>
+      <p>The most surprising mechanical problem of the entire project was the trigger mechanism. After tossing around a few basic ideas at the beginning of sprint 2, we settled on a rack and pinion trigger mechanism powered by two small motors attached to the marker mount. For safety reasons, we initially wanted to have the trigger mechanism pull itself off of the trigger when unpowered - which meant a backdrivable motor. Unfortunately, every motor on campus that was powerful enough to pull the trigger proved to be impossible to backdrive. Our experiments with elastic assists made the trigger operable by weaker motors but effectively prevented reloading. Ultimately, we made the aforementioned “clicky mod” so as to make the trigger pullable by weaker motors, then wired the motors to be reversible by our circuit anyways, giving us best-of-all-worlds performance: powerful, durable, and safe.</p>
+    </div>
+    <div class="panel-25">
+      <img class="mech-system-image" src=""/>
+    </div>
+  
+  
+    <div class="video">
+      <iframe width="560" height="315" src="//www.youtube.com/embed/Q2xGJjUTLzo" frameborder="0" allowfullscreen></iframe>
+    </div>
+    
+</div>
+
+<div class="wrapper">
+  
+  
+    <div class="panel-25">
+      <img class="mech-system-image" src=""/>
+    </div>
+    <div class="panel-75">
+      <div class="mech-system-header wrapper">
+        <h4>Safety</h4>
+      </div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce fringilla vulputate lorem ut facilisis. Aliquam id orci sit amet mi efficitur lobortis eget vel magna. Vivamus fermentum, nisl vel malesuada lacinia, erat orci viverra mauris, in varius leo dui sed sem.</p>
+    </div>
+  
+  
+</div>
+
+<div class="wrapper">
+  <img class="mech-footer-image" src=""/>
+  <img class="mech-footer-image" src=""/>
+</div>
+
+
+  </section>
+</div>
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Team Pew Pew Pew - Olin College of Engineering: Principles of Engineering, Fall 2014</p>
+      </footer>
+    </div>
+  </body>
+</html>
