@@ -56,6 +56,9 @@
 .panel-25 img {
   margin-top: 55px;
 }
+.panel-33 img {
+  margin-top: 55px;
+}
 
 img {
   width: 95%;
@@ -170,7 +173,7 @@ a.gh-button {
   background-size: 40px 20px;
   margin-right: 4px;
   vertical-align: 3px;
-  background-image: url(/images/githubicon.svg);
+  background-image: url(/poe2014/ppp//images/githubicon.svg);
   background-repeat: no-repeat;
 }
 

@@ -2,7 +2,7 @@
   "title":
     "Mechanical Design",
   "headerImage": "images/mechanical/renderright.jpeg",
-  "finalProduct": "images/mechanical/final_assembly.png",
+  "finalProduct": "images/mechanical/final_assembly.PNG",
   "systems": [
     {
       "name": "Pan",
@@ -23,7 +23,7 @@
     {
       "name": "Marker Modification",
       "description": "Before our paintball marker could be safely and easily operated by an autonomous system, we had to make a pair of key modifications. First, we dropped the firing pressure on the marker all the way to its absolute minimum, hoping that this would alleviate some safety concerns by reducing paintball muzzle velocity. Second, we replaced the marker’s internal trigger spring with a weaker spring <a href=http://www.paintballforum.com/tippmann-pneumatics/75424-official-mod-thread.html>from a clicky pen</a> so as to enable easier trigger firing. Without the former modification we would not have been allowed to proceed with the project; without the later we would’ve had to shell out for expensive motors to operate the trigger safely.",
-      "image": "images/mechanical/marker.jpg"
+      "image": "images/mechanical/marker.JPG"
     },
     {
       "name": "Trigger",

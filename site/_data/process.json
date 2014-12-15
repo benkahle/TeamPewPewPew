@@ -2,11 +2,10 @@
   "title":
     "Design Process",
   "headerImages": [
-    "images/process/before.jpg",
+    "images/process/before_cropped.PNG",
     "images/process/after.jpg"
   ],
   "sprintIntro": "Our team used the Scrum development process to create a finished system by iterating through successive minimum viable products. After picking our initial concept - a skeet-shooting paintball turret - and setting a goal of creating a system with unusually high production value, we embarked on our first sprint. To track and organize our work, we relied on Pivotal Tracker, an online productivity tool intended for use with Scrum. Code and CAD was stored in a central repository on GitHub, while meetings were coordinated over email. The duration of our work time comprised four two-week sprints, after two of which we presented our progress to our classmates in a design review which allowed us to receive constructive feedback. With this process infrastructure in place, we thought we had all the framework needed for a successful team project… but while we wound up in a good place, the process did not always flow exactly as intended.",
-  "budgetDescription": "Our final iteration is mostly composed of laser cut MDF, 3D printed PLA components, plywood, and a galvanized steel turntable. We also have a number of limit switches, insert other electrical smoke and mirrors, and a webcam.",
   "budgetImage":"images/mechanical/bom.JPG",
   "finalVideo":"//www.youtube.com/embed/hwLvW_c3PFg",
   "sprints": [
@@ -26,7 +25,7 @@
       "description": "Our third sprint’s primary objective was to create a fully operational and testable prototype. Unfortunately, while we made good progress in several aspects of our mechanical design, we also encountered a series of setbacks due in part to poor design process. A decision was made (mostly through collective inertia) to fabricate new marker mount uprights from locally sourced scrap steel. The result was a non-structural, cobbled-together mess of a tower and several days of wasted machine shop time. We iterated the trigger mechanism another two times with two new motors, only to find that neither was strong enough to pull the trigger without a dangerous and cumbersome elastic assist. Had we done a little more thinking before iterating, we could’ve saved a lot of effort and moved forward faster. Though we made good progress on the pan motor mount and rack design in sprint three, our design review and sprint retrospective were moments of soul-searching. After renewing our commitment to some of our initial process decisions (like sub-teaming, Pivotal, and in-depth critical discussion of decision-making), we moved forward to sprint four with a completely new tower design and a return to our trigger mechanism’s roots."
     },
     {
-      "title": "Final Product (December 15th, 2014)",
+      "title": "Final Prototype (December 15th, 2014)",
       "image": "images/process/sprint4.jpg",
       "description": "We began our final sprint by rapidly designing and constructing a new, sturdier pair of marker mount uprights from MDF. The new design incorporated a worm gear for tilting the marker - but after a day of playing around with the system, we decided to scrap the worm gear and instead craft a custom gearbox. During this redesign process, we also modified the pan surface to support the new marker mount. Instead of trying to make the trigger work by increasing mechanical complexity, we iterated our circuit design and reverted to a version of the original trigger mechanism. After testing, we revised this design slightly for increased durability and stability. After cleaning up our circuitry and making a few last-minute revisions to the code, we were ready to test out and present Project Pop Pop Pop!"
     }

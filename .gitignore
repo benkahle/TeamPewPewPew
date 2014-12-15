@@ -1,5 +1,5 @@
 *.swp
 *.pyc
 *~
-_site/*
+site/_site/*
 Gemfile.lock
