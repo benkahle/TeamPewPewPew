@@ -3,3 +3,19 @@ layout: default
 title: Team Pew Pew Pew - Electrical System
 ---
 <h2>{{site.data.electric.title}}</h2>
+<div class="wrapper">
+  <img class="header-width" src="{{site.data.electric.circuitBoard}}"/>
+</div>
+<div class="wrapper">
+  <h4>{{System Overview}}</h4>
+  <p>{{site.data.electric.overview}}</p> 
+</div>
+<div class="wrapper">
+  <img class="header-width" src="{{site.data.electric.circuitDiagram}}"/>
+</div>
+{% for section in site.data.electric.sections %}
+<div class="wrapper">
+  <h4>{{section.title}}</h4>
+  <p>{{section.description}}</p> 
+</div>
+{% endfor %}

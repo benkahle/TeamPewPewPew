@@ -4,6 +4,7 @@ title: Team Pew Pew Pew - Mechanical System
 ---
 <h2>{{site.data.mech.title}}</h2>
 <div class="wrapper">
+  <img class="header-image" src="{{site.data.mech.headerImage}}"/>
 </div>
 {% for system in site.data.mech.systems %}
 <div class="wrapper">
@@ -33,11 +34,16 @@ title: Team Pew Pew Pew - Mechanical System
     <div class="video">
       <iframe width="560" height="315" src="{{system.video}}" frameborder="0" allowfullscreen></iframe>
     </div>
-    {% endif %}
+  {% endif %}
+  {% if system.video2 %}
+    <div class="video">
+      <iframe width="560" height="315" src="{{system.video2}}" frameborder="0" allowfullscreen></iframe>
+    </div>
+  {% endif %}
 </div>
 {% endfor %}
+<h3>The Full Mechanical System</h3>
 <div class="wrapper">
-  <img class="mech-footer-image" src="{{site.data.mech.finalCad}}"/>
   <img class="mech-footer-image" src="{{site.data.mech.finalProduct}}"/>
 </div>
 

@@ -4,10 +4,12 @@ layout: default
 ---
 <h2>{{site.data.home.title}}</h2>
 <div>
-<img class="header-image" src="{{site.data.home.titleImage}}"/>
+  <img class="header-image" src="{{site.data.home.titleImage}}"/>
 </div>
-<h3>Project Summary and Goals</h3>
+<h3>Project Summary</h3>
 <p>{{site.data.home.summary}}</p>
+<h3>Project Goals</h3>
+<p>{{site.data.home.goals}}</p>
 <h3>Sub Systems</h3>
 <div class="wrapper">
 {% for subsystem in site.data.home.subsystems %}

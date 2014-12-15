@@ -47,6 +47,42 @@
 <div id="main_content_wrap" class="outer">
   <section id="main_content" class="inner">
 <h2>Electrical System</h2>
+<div class="wrapper">
+  <img class="header-width" src="images/electrical/cleanCircuitBoard.JPG"/>
+</div>
+<div class="wrapper">
+  <h4></h4>
+  <p>Throughout our work on Project Pop Pop Pop, the primary goals of our electrical subsystem work were to reduce risk of personal or property damage and to prevent dangerous accidents. To this end, we integrated multiple layers of protection throughout a unified safety system. <br/>The limit switch safeties are placed so that a limit switch would trigger and inhibit system functionality if the marker began to move out of range. The dead man trigger safety switch, seen in dark blue, allows us to separate power used for moving the trigger motors from the rest of the circuit. The H-Bridge protection circuitry, seen in yellow, ensures that two high signals can not be simultaneously sent to the quad half H-Bridge chip, so that we do not short the chip which could lead to serious consequences depending on the failure mode. If the limit switches, dead man trigger, and H-Bridge protection register high signals, then the quad half H-Bridge is enabled, seen in cyan, and, upon receiving either a forwards or backwards command, powers the two trigger motors with approximately 1.5 amps at 5 volts. <br/>A series of colored LED lights illustrate the state of the system as seen in green. Green lights indicate that the deadman switches and all limit switches are clear. However, if the limit switches are clear and the dead man switch is compressed, the yellow LEDs would additionally light. Finally, if all systems are clear and the trigger motors are powered then the red LEDs illuminate. These indicator lights ensure that the operators of the system are aware of it’s state at all times and do not need multimeters or scopes to understand the operational safety state of the system.</p> 
+</div>
+<div class="wrapper">
+  <img class="header-width" src="images/electrical/circuitDiagram.png"/>
+</div>
+
+<div class="wrapper">
+  <h4>Limit Switch Safeties</h4>
+  <p>The limit switch safeties address two potential safety failure modes. First, if the paintball marker is driven past a safe operational angle in either pan or tilt direction the H-Bridge would be inhibited and prevent the marker from firing. Secondly, if any of the limit switches ever become disconnected from the circuit (Example: from a violent movement of the supporting shelving unit) the pull-down resistors would inhibit the H-Bridge. The four signals are passed through successive OR gates after being inverted to provide a signal for the LED safety indicators and dead man trigger safety.</p> 
+</div>
+
+<div class="wrapper">
+  <h4>Dead Man Switch Safety</h4>
+  <p>The dead man switch in our system primarily serves as an on button for power flowing to the dual half H-Bridge. Its secondary function is to provide a warning signal that alerts bystanders and operators that the system is armed and ready to fire. Our circuit provides power directly to the dual half H-Bridge, then buffers with a pulldown resistor to provide a logical signal to an AND gate. The output of this AND gate - which combines the dead man switch safety and the limit switch safeties - provides the yellow signal to our LED safety indicators.</p> 
+</div>
+
+<div class="wrapper">
+  <h4>H-Bridge Safety Logic</h4>
+  <p>One significant risk from both a safety and reliability perspective was the possibility of shorting the H-Bridge used to drive the trigger motors by accidentally driving both inputs to the H-Bridge high. We resolved this issue by buffering the incoming signals through a small logical network,  which never allows short-causing inputs to the H-Bridge. Additionally, the system’s two signal output wires are rigged through an XOR gate and an AND gate to provide the last LED safety indicator of active motor engagement.</p> 
+</div>
+
+<div class="wrapper">
+  <h4>Quad Half H-Bridge</h4>
+  <p>The greatest challenge in the electrical section of this project was creating the drivers necessary to provide our motors with at least 1.2 amps across 5 volts. We developed several distinct topologies using discrete components. A full H-Bridge using Darlington topology BJTs was observed to fire the trigger in one test, but was unable to move it the next day. After a long and fruitless search, we finally found the SN754410N Quad Half H-Bridge in the Olin EE stockroom. It was able to push / pull up to 1 amp per half H-Bridge, making it more than sufficiently strong for our purposes. Additionally, it used a Darlington and Pseudo Darlington topology, which we had had previous success with. To our delight, we were completely successful in implementing this new chip, which works to specifications and seems to draw less power in waste heat than its predecessors did. This is the chip powering the trigger in all movies found on this site.</p> 
+</div>
+
+<div class="wrapper">
+  <h4>LED Safety Indicators</h4>
+  <p>All the safety systems in the world are no good if the operators of the potentially dangerous machinery are not aware of which features are engaged at what times. To keep ourselves up to date on our system’s operation, we installed three sets of colored LEDs on the podium. The LEDs allow operators and bystanders alike to observe increasing levels of functionality and potential danger as power is delivered closer and closer to the quad half H-Bridge, and subsequently used to fire the trigger. Although this part of the circuit was not remarkable in any electrical sense, it allows important information from the full array of safeties implemented throughout our electrical system to be conveyed sufficiently to the operator and any bystanders, and is thus a crucial element of our electronic design.</p> 
+</div>
+
   </section>
 </div>
     <div id="footer_wrap" class="outer">

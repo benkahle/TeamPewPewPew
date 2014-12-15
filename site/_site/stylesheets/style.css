@@ -44,13 +44,17 @@
 }
 
 .image-thumbnail img{
-  width: 95%;
+  width: 93%;
 }
 
 .panel-25 {
   vertical-align: top;
   width: 25%;
   display: inline-block;
+}
+
+.panel-25 img {
+  margin-top: 55px;
 }
 
 img {
@@ -75,7 +79,8 @@ img {
 }
 
 
-.bio-image {
+img.bio-image {
+  margin-top: 0px;
   width: 94%;
   height: auto;
 }

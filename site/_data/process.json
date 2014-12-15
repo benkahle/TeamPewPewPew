@@ -7,8 +7,8 @@
   ],
   "sprintIntro": "Our team used the Scrum development process to create a finished system by iterating through successive minimum viable products. After picking our initial concept - a skeet-shooting paintball turret - and setting a goal of creating a system with unusually high production value, we embarked on our first sprint. To track and organize our work, we relied on Pivotal Tracker, an online productivity tool intended for use with Scrum. Code and CAD was stored in a central repository on GitHub, while meetings were coordinated over email. The duration of our work time comprised four two-week sprints, after two of which we presented our progress to our classmates in a design review which allowed us to receive constructive feedback. With this process infrastructure in place, we thought we had all the framework needed for a successful team project… but while we wound up in a good place, the process did not always flow exactly as intended.",
   "budgetDescription": "Our final iteration is mostly composed of laser cut MDF, 3D printed PLA components, plywood, and a galvanized steel turntable. We also have a number of limit switches, insert other electrical smoke and mirrors, and a webcam.",
-  "budgetImage":"images/budget.jpg",
-  "finalVideo":"//www.youtube.com/watch?v=hwLvW_c3PFg",
+  "budgetImage":"images/mechanical/bom.JPG",
+  "finalVideo":"//www.youtube.com/embed/hwLvW_c3PFg",
   "sprints": [
     {
       "title": "Scope and Rapid Prototype (October 28th, 2014)",

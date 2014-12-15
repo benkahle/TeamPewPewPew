@@ -7,6 +7,7 @@
 <strong>BAM <em>splat!</em></strong><br/>
 We’re Team Pew Pew Pew. This is Project Pop Pop Pop.<br/>
 For the last two months, as part of a class called Principles of Engineering, we’ve been working to design and construct an automatic paintball turret that can locate and annihilate brightly colored balloons. Using SimpleCV, PySerial, an Arduino Uno with an Adafruit motor shield, a loaner Tippmann 98 Custom paintball marker, a smorgasbord of power electronics, and all of the fabrication resources Olin College has to offer, we managed to achieve just that. On this webpage you can learn all about our team and our project, from the fundamentals of process and planning to the dirty details of mechanical design. Check it out!",
+  "goals": "Our project objective had multiple levels where each level collectively developed the complexity of the system. The goal of our foundational level was to aim and launch paintballs at an object. Next, we wanted to identify an object of a specific color, aim, and shoot it. Finally, our stretch goal was to identify a moving object of a specific color, track it, and shoot it out of the air--preferably with a satisfying pop!",
   "subsystems": [
     {
     "title": "Mechanical",
@@ -18,7 +19,7 @@ For the last two months, as part of a class called Principles of Engineering, we
     "title": "Electrical",
     "image": "images/home/electrical.jpg",
     "brief":
-      "Automatic turrets can be pretty risky business - unless, that is, you build in safeties. We used a complex system of circuits and switches to power our system in the most efficient, least risky manner possible."
+      "Automatic turrets can be pretty risky business - unless, that is, you build in safeties. We used a variety of digital circuit components, switches, and indicators to power our system with redundant failsafes ensuring the safety of all persons and projects."
     },
     {
     "title": "Software",
