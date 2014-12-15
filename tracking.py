@@ -3,11 +3,11 @@ import math
 import serial
 import time
 
-ser = serial.Serial('/dev/tty.usbmodem1411', 9600)
-ser.flushInput()
-ser.flushOutput()
+# ser = serial.Serial('/dev/tty.usbmodem1411', 9600)
+# ser.flushInput()
+# ser.flushOutput()
 time.sleep(2)
-ser.write(chr(32)); #send reset to arduino
+# ser.write(chr(32)); #send reset to arduino
 
 #Constants
 WIDTH = 320
@@ -16,23 +16,23 @@ HEIGHT = 240
 #Listen for initialization information from Arduino
 frameWidthSteps = 100 #default values
 frameHeightSteps = 100
-waiting = True
-ms = []
-startingMs = [0,255,0,255]
-while waiting:
-  m = ser.read(1)
-  print(ord(m))
-  ms.append(ord(m))
-  if len(ms) == 4:
-    if ms == startingMs:
-      waiting = False
-    else:
-      ms.pop(0)
+# waiting = True
+# ms = []
+# startingMs = [0,255,0,255]
+# while waiting:
+#   m = ser.read(1)
+#   print(ord(m))
+#   ms.append(ord(m))
+#   if len(ms) == 4:
+#     if ms == startingMs:
+#       waiting = False
+#     else:
+#       ms.pop(0)
 
-frameWidthSteps = ord(ser.read(1))
-print("Width steps: ", frameWidthSteps)
-frameHeightSteps = ord(ser.read(1))
-print("Height steps: ", frameHeightSteps)
+# frameWidthSteps = ord(ser.read(1))
+# print("Width steps: ", frameWidthSteps)
+# frameHeightSteps = ord(ser.read(1))
+# print("Height steps: ", frameHeightSteps)
 
 # Initialize webcam connection
 display = SimpleCV.Display()
@@ -99,13 +99,13 @@ while display.isNotDone():
     ySign = int(goal[1] > pos[1]) << 1
     t = int(shooting)
     command = xEn | xSign | yEn | ySign | t
-    ser.write(chr(command)) #send hex equivalent of 5 bit command
+    # ser.write(chr(command)) #send hex equivalent of 5 bit command
     print "Command: ", bin(command)
     # map from [0,1] to [-1,1] and change stored position
     pos[0] += xSpeed*(2*int(goal[0] > pos[0])-1)
     pos[1] += ySpeed*(2*int(goal[1] > pos[1])-1)
     # Wait for confirmation message before continuing
-    conf = ser.read(1)
+    # conf = ser.read(1)
     time.sleep(0.5)
     
   # Draw cross hair at current position with color changing for trigger status
@@ -118,4 +118,4 @@ while display.isNotDone():
   else:
     flippedDist.show()
 
-ser.close();
+# ser.close();

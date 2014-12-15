@@ -28,20 +28,52 @@
   background: #666;
 }
 
+.header-image {
+  width: 100%;
+}
+
+.header-image-2 {
+  width: 45%;
+  height:100%;
+}
+
+.image-thumbnail {
+  height: 250px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.image-thumbnail img{
+  width: 95%;
+}
+
 .panel-25 {
+  vertical-align: top;
   width: 25%;
   display: inline-block;
 }
 
+img {
+  width: 95%;
+}
+
 .panel-33 {
+  vertical-align: top;
   width: 32.9%;
   display: inline-block;
 }
+.panel-66 {
+  vertical-align: top;
+  width: 65.8%;
+  display:inline-block;
+}
 
 .panel-75 {
+  vertical-align: top;
   width: 73%;
   display: inline-block;
 }
+
 
 .bio-image {
   width: 94%;

@@ -16,20 +16,20 @@ title: Team Pew Pew Pew - Process
   <div class="wrapper">
   {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
   {% if thecycle == 'odd' %}
-    <div class="panel-75">
+    <div class="panel-66">
       <div class="process-sprint-header wrapper">
         <h4>{{sprint.title}}</h4>
       </div>
       <p>{{sprint.description}}</p>
     </div>
-    <div class="panel-25">
+    <div class="panel-33">
       <img class="process-sprint-image" src="{{sprint.image}}"/>
     </div>
   {% else %}
-    <div class="panel-25">
+    <div class="panel-33">
       <img class="process-sprint-image" src="{{sprint.image}}"/>
     </div>
-    <div class="panel-75">
+    <div class="panel-66">
       <div class="process-sprint-header wrapper">
         <h4>{{sprint.title}}</h4>
       </div>
@@ -38,6 +38,12 @@ title: Team Pew Pew Pew - Process
   {% endif %}
 </div>
 {% endfor %}
+</div>
+<h3>Final Prototype Testing</h3>
+<div class="wrapper">
+  <div class="video">
+      <iframe width="560" height="315" src="{{site.data.process.finalVideo}}" frameborder="0" allowfullscreen></iframe>
+    </div>
 </div>
 <h3>Components</h3>
 <p>{{site.data.process.budgetDescription}}</p>

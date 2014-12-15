@@ -14,8 +14,12 @@ const int safePin = 4;
 const int xPosLimitPin = 5;
 const int xNegLimitPin = 6;
 const int yPosLimitPin = 7;
-const int yNegLimitPin = 8; 
-const int stepsPerCommand = 10;
+const int yNegLimitPin = 8;
+const int triggerFirePin = 9;
+const int triggerReleasePin = 10;
+const int activatePin = 13;
+const int yStepsPerCommand = 6;
+const int xStepsPerCommand = 20;
 
 const int xEnIndex = 4;
 const int xSignIndex = 3;
@@ -32,24 +36,41 @@ void setup() {
   MCUSR = 0;  // clear out any flags of prior resets.
   Serial.begin(9600);
   AFMS.begin();
-  stepperX->setSpeed(120);
-  stepperY->setSpeed(120);
+  stepperX->setSpeed(80);
+  stepperY->setSpeed(50);
   pinMode(safePin, INPUT);
-  pinMode(4, INPUT);
-  pinMode(5, INPUT);
-  pinMode(6, INPUT);
-  pinMode(7, INPUT);
-  pinMode(8, INPUT);
-  initialize();
+  pinMode(xPosLimitPin, INPUT);
+  pinMode(xNegLimitPin, INPUT);
+  pinMode(yPosLimitPin, INPUT);
+  pinMode(yNegLimitPin, INPUT);
+  pinMode(triggerFirePin, OUTPUT);
+  pinMode(triggerReleasePin, OUTPUT);
+  pinMode(activatePin, INPUT);
+  int safeToGo = digitalRead(activatePin);
+  if (safeToGo) {
+    initialize();
+  }
 }
 
 // Motor command function wrapper
 void stepMotor(int stepSign, Adafruit_StepperMotor* stepper) {
-  stepper->step(stepsPerCommand, stepSign, SINGLE);
+  if (stepper == stepperY) {
+    stepper->step(yStepsPerCommand, stepSign, DOUBLE);
+  }
+  if (stepper == stepperX) {
+    stepper->step(xStepsPerCommand, stepSign, DOUBLE);
+  }
 }
 
 void shoot() {
-
+  digitalWrite(triggerReleasePin, 0);
+  digitalWrite(triggerFirePin, 1);
+  delay(500);
+  digitalWrite(triggerFirePin, 0);
+  digitalWrite(triggerReleasePin, 1);
+  delay(250);
+  digitalWrite(triggerReleasePin, 0);
+  delay(100);
 }
 
 // Initialization routine run on startup 
@@ -67,7 +88,7 @@ void initialize() {
     xPosLimit = !digitalRead(xPosLimitPin);
     if (xPosLimit) xPosHit = 1;
     stepMotor(1, stepperX);
-    delay(200);
+    delay(50);
   }
   while (!yPosHit) {
     yPosLimit = !digitalRead(yPosLimitPin);
@@ -80,7 +101,7 @@ void initialize() {
     if (xNegLimit) xNegHit = 1;
     stepMotor(0, stepperX);
     frameWidth++;
-    delay(200);
+    delay(50);
   }
   while (!yNegHit) {
     yNegLimit = !digitalRead(yNegLimitPin);
@@ -95,22 +116,58 @@ void initialize() {
   Serial.write((byte)255);
   byte fw = byte(frameWidth);
   Serial.write(fw);
-
-  stepperX->step(0,0,SINGLE);
-  stepperY->step(0,0,SINGLE);
-
   byte fh = byte(frameHeight);
   Serial.write(fh);
+
+  // stepperX->step(0,0,SINGLE);
+  // stepperY->step(0,0,SINGLE);
+
+
+  //Center Shot
+  // movePercent(50, stepperY);
+  // movePercent(50, stepperX);
+  // shoot();
+  // shoot();
+
+  //Top Left - Center - Bottom Right
+  movePercent(35, stepperY);
+  movePercent(35, stepperX);
+  shoot();
+  // delay(5000);
+  movePercent(12, stepperY);
+  movePercent(15, stepperX);
+  shoot();
+  // delay(5000);
+  movePercent(10, stepperY);
+  movePercent(15, stepperX);
+  shoot();
+  // delay(5000);
 
   stepperX->release();
   stepperY->release();
 }
 
+void movePercent(int percent, Adafruit_StepperMotor* stepper) {
+  int dir;
+  int steps;
+  if (percent > 0) {
+    dir = 1;
+  } else {
+    dir = 0;
+  }
+  if (stepper == stepperY) {
+    steps = (int)frameHeight/(100/(float)abs(percent));
+  } else {
+    steps = (int)frameWidth/(100/(float)abs(percent));
+  }
+  for (int k = 0; k < steps; k++) {
+    stepMotor(dir, stepper);
+  }
+}
+
 void loop() {
-  // safe = digitalRead(safePin);
-  // stepMotor(50, stepperY); 
-  // delay(50);
-  safe = 1;
+  safe = digitalRead(safePin);
+  // safe = 1;
   if (safe) {
     if (Serial.available() > 0) {
       byte command = 0x00;
